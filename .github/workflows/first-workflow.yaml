@@ -15,6 +15,6 @@ jobs:
       needs: run-shell-commands
       steps:
          - name: echo a string
-           run: Write-Output "Windows string"
+           run: echo "Windows string"
          - name: Error
            run: doesntexist
