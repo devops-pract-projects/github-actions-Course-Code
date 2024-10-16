@@ -16,5 +16,4 @@ jobs:
       steps:
          - name: echo a string
            run: echo "Windows string"
-         - name: Error
-           run: doesntexist
+         
