@@ -8,5 +8,13 @@ jobs:
            run: echo "Hello world"
          - name: Multiline command 
            run: 
-            echo "This is the node version:" node -v
+            echo "This is the node version:"  node -v
             echo "This is the npm version:" npm -v
+   dependant-job:
+      runs-on: windows-latest
+      needs: run-shell-commands
+      steps:
+         - name: echo a string
+           run: Write-Output"Windows string"
+         - name: Error
+           run: doesntexist
