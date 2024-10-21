@@ -1,5 +1,5 @@
 name: Repository Event 
-on: [push, pull_request,issues]
+on: [push]
 
 
 jobs: 
