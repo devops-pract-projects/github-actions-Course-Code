@@ -1,26 +1,11 @@
 name: External Events
 
 on:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: 'Your name'
-        required: true
-        default: 'Mona the Octocat'
-      home:
-        description: 'Your home'
-        required: true
-        default: 'San Francisco, CA'
-
+  repository_dispatch:
+   
 jobs:
-  build:
+   echo-a-string:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-
-    - name: Print Inputs
-      run: |
-        echo "Name: ${{ github.event.inputs.name }}"
-        echo "Home: ${{ github.event.inputs.home }}"
+     - run: echo "Repository Dispatch"
