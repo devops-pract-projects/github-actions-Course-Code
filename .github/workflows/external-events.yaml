@@ -2,10 +2,11 @@ name: External Events
 
 on:
   repository_dispatch:
-   
+   types: [external-event]
+
 jobs:
-   echo-a-string:
+  echo-a-string:
     runs-on: ubuntu-latest
 
     steps:
-     - run: echo "Repository Dispatch"
+    - run: echo "Repository Dispatch"
