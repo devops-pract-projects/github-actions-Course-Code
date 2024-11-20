@@ -1,8 +1,8 @@
 name: External Events
 
 on:
-  repository_dispatch:
-   types: [external-event]
+  workflow_dispatch:
+   
 
 jobs:
   echo-a-string:
