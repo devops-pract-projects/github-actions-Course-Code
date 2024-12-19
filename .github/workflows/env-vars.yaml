@@ -4,6 +4,7 @@ on: [push]
 jobs:
   env-vars-and-context:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/my-test-branch'
     steps:
       - name: Log ENV Var
         run: echo $GITHUB_REF
