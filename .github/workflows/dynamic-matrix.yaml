@@ -3,7 +3,7 @@ on:
    workflow_dispatch:
       inputs:
          os:
-            description: Operating Systems 
+            description: Operating Systems
             default: "windows-latest,ubuntu-latest"
             type: string
 
