@@ -1,0 +1,19 @@
+name: Calling Reuasble Workflow
+on: 
+   workflow_dispatch:
+      inputs:
+         name:
+            description: "Input Description"
+            type: string
+            default: "Mckyle"
+            required: false
+
+
+jobs:
+   calling-a-reusable-workflow:
+      uses: devops-pract-projects/github-actions-workflow/.github/workflows/reusable.yaml@main
+      with: 
+         name: ${{inputs.name}}
+      secrets:
+         access-token: ${{secrets.ACCESS_TOKEN}}
+
