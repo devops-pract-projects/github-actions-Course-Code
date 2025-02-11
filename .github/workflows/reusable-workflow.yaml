@@ -8,6 +8,15 @@ on:
 
 
 jobs:
+   nested-workflow-call:
+      uses: devops-pract-projects/github-actions-workflow/.github/workflows/reusable.yaml@main
+      with: 
+         name: "Mickey"
+      secrets:
+         access-token: ${{secrets.ACCESS_TOKEN}}
+
+
+
    generate-output:
       runs-on: ubuntu-latest
       outputs:
@@ -15,3 +24,6 @@ jobs:
       steps:
          - run: echo "date=$(date)" >> $GITHUB_OUTPUT
            id: date-step
+
+
+      
